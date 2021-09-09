@@ -1,0 +1,152 @@
+.header {
+	position:fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 50;
+	&:before{
+		content: '';
+		position:absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: black;
+		z-index: 2;
+	}
+	/* .header__body */
+	&__body {
+		position:relative;
+		
+		display: flex;
+		justify-content: space-between;
+		height: 70px;
+		align-items: center;
+		padding: 0 10px;
+
+	}
+	/* .header__logo */
+	&__logo {
+		flex: 0 0 60px;
+		position: relative;
+		z-index: 3;
+	}
+	/* .header__logo-img */
+	&__logo-img {
+		max-width: 100%;
+	}
+	/* .header__burger */
+	&__burger {
+	}
+	/* .header__menu */
+	&__menu {
+	}
+	/* .header__list */
+	&__list {
+		display: flex;
+		position:relative;
+		z-index: 2;
+	}
+	/* .header__list-item */
+	&__list-item {
+		margin: 0 0 0 20px;
+	}
+	/* .header__link */
+	&__link {
+		opacity: 0.69;
+		font-family: 'OpenSans', sans-serif;
+		font-size: 14px;
+		line-height: 1.2;
+		font-weight: 600;
+		color: #ffffff;
+		font-style: normal;
+	}
+}
+.container {
+	max-width: 1102px;
+	margin: 0 auto;
+}
+
+@media (max-width: 767px) {
+	body.lock{
+		overflow: hidden;
+	}
+	.header__body{
+		height: 50px;
+	}
+	.header__logo{
+		flex: 0 0 40px;
+	}
+	.header__burger{
+		display: block;
+		position: relative;
+		width: 30px;
+		height: 20px;
+		position: relative;
+		z-index: 3;
+		& span{
+			position:absolute;
+			background: #ffffff;
+			left: 0;
+			width: 100%;
+			height: 2px;
+			top: 9px;
+			transition: all 0.3s ease 0s;
+		}
+		&:before,&:after{
+			content: '';
+			background: #ffffff;
+			position: absolute;
+			width: 100%;
+			height: 2px;
+			left: 0;
+			transition: all 0.3s ease 0s;
+		}
+		&:before{
+			top: 0;
+		}
+		&:after{
+			bottom: 0;
+		}
+		&.active span {
+			transform:scale(0);
+		}
+		&.active:before{
+			transform: rotate(45deg);
+			top:9px;
+		}
+		&.active:after{
+			transform: rotate(-45deg);
+			bottom:9px;
+
+		}
+
+	}
+
+	.header__menu{
+		position:fixed;
+		top: -100%;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		overflow: auto;
+		background: black;
+		padding: 70px 10px 20px 10px;
+		transition: all 0.3s ease 0s;
+
+	}
+	.header__menu.active{
+		top:0;
+	}
+
+	.header__list{
+		display: block;
+
+	}
+	.header__list-item{
+		margin: 0 0 20px 0;
+	}
+	.header__link{
+		font-size: 24px;
+	}
+}
