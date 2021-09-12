@@ -421,6 +421,65 @@ h6 {
   font-size: 20px;
 }
 
+.social {
+  padding: 22px 0;
+  /* .social__inner */
+  /* .social__description */
+  /* .social__description-title */
+  /* .social__description-text */
+  /* .social__labels */
+  /* .social__labels-list */
+  /* .social__labels-item */
+  /* .social__labels-link */
+}
+
+.social__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.social__description-title {
+  font-family: 'OpenSans', sans-serif;
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: 700;
+  color: #333333;
+  margin: 0 0 12px 0;
+}
+
+.social__description-text {
+  font-family: 'OpenSans', sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #86878b;
+}
+
+.social__labels-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.social__labels-item {
+  margin: 0 0 0 56px;
+}
+
+.social__labels-link {
+  font-family: 'Font Awesome';
+  font-size: 48px;
+  line-height: 1.2;
+  font-weight: 400;
+  color: #cccccc;
+}
+
 @media (max-width: 1102px) {
   .container {
     max-width: 970px;
@@ -430,6 +489,36 @@ h6 {
 @media (max-width: 992px) {
   .container {
     max-width: 750px;
+  }
+
+  .social {
+    padding: 15px 0;
+    /* .social__description-title */
+    /* .social__description-text */
+    /* .social__labels-item */
+  }
+
+  .social__inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .social__description-title {
+    text-align: center;
+    margin: 0 0 10px 0;
+  }
+
+  .social__description-text {
+    display: none;
+  }
+
+  .social__labels-item:first-child {
+    margin: 0;
   }
 }
 
@@ -634,6 +723,19 @@ h6 {
   .start__left-text {
     display: none;
   }
+
+  .social {
+    /* .social__labels-item */
+    /* .social__labels-link */
+  }
+
+  .social__labels-item {
+    margin: 0 0 0 1.6em;
+  }
+
+  .social__labels-link {
+    font-size: 36px;
+  }
 }
 
 @media (max-width: 400px) and (orientation: portrait) {
@@ -705,6 +807,21 @@ h6 {
         -ms-transform: scale(105%, 105%);
             transform: scale(105%, 105%);
     font-size: 20px;
+  }
+}
+
+@media (max-width: 400px) {
+  .social {
+    /* .social__description-title */
+    /* .social__labels-link */
+  }
+
+  .social__description-title {
+    font-size: 17px;
+  }
+
+  .social__labels-link {
+    font-size: 23px;
   }
 }
 
